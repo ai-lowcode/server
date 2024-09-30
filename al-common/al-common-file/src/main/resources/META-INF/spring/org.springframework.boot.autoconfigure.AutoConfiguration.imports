@@ -1,0 +1,3 @@
+cn.com.axel.common.file.handler.StorageHandler
+cn.com.axel.common.file.config.properties.StorageProperties
+cn.com.axel.common.file.config.StorageConfig

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.axel.oauth.mapper.SsoRoleMapper">
+    <insert id="insertRoleMenus">
+        insert into sso_role_menu(role_id, menu_id) values
+        <foreach collection="menuList" item="menu" separator=",">
+            (#{roleId},#{menu})
+        </foreach>
+    </insert>
+    <select id="roleCodeExist" resultType="int">
+        select count(0) from sso_role
+        <where>
+            del_flag = 0 and tenant_id = #{tenantId} and role_code = #{roleCode}
+            <if test="roleId!=null and roleId!=''">
+                and id != #{roleId}
+            </if>
+        </where>
+    </select>
+    <resultMap id="roleMap" type="cn.com.axel.common.oauth.entity.SsoRole">
+        <result property="menus" column="menus" typeHandler="cn.com.axel.oauth.handler.StrToListTypeHandler"/>
+    </resultMap>
+    <select id="getRoleUsers" resultType="string">
+        select a.* from (
+        select ur.user_id
+        from sso_user_role ur
+        where ur.role_id in
+        <foreach collection="roleIds" item="roleId" separator="," open="(" close=")">
+            #{roleId}
+        </foreach>
+        union
+        select ou.user_id
+        from sso_org_user ou
+        inner join sso_org_role sor on sor.org_id=ou.org_id
+        where sor.role_id in
+        <foreach collection="roleIds" item="roleId" separator="," open="(" close=")">
+            #{roleId}
+        </foreach>
+        ) a
+        inner join sso_user su on su.id = a.user_id
+        <where>
+            <if test="containInvalid == false">
+                su.`status` = 0 and su.del_flag = 0
+            </if>
+        </where>
+    </select>
+    <select id="isTenantRole" resultType="java.lang.Integer">
+        select count(0) from sso_role where tenant_id = #{tenantId} and id = #{roleId}
+    </select>
+    <select id="getRoleIdsByCode" resultType="java.lang.String">
+        select id from sso_role where tenant_id=#{tenantId} and role_code in
+        <foreach collection="roleCodes" item="code" separator="," open="(" close=")">
+            #{code}
+        </foreach>
+    </select>
+</mapper>

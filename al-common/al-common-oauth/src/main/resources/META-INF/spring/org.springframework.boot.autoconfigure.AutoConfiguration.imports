@@ -1,0 +1,8 @@
+cn.com.axel.common.oauth.service.impl.WebTokenServiceImpl
+cn.com.axel.common.oauth.service.impl.WeChatTokenServiceImpl
+cn.com.axel.common.oauth.aspect.AuthorizationAspect
+cn.com.axel.common.oauth.validator.WebTokenValidator
+cn.com.axel.common.oauth.validator.WeChatTokenValidator
+cn.com.axel.common.oauth.validator.TokenValidator
+cn.com.axel.common.oauth.scope.SelectInterceptor
+cn.com.axel.common.oauth.aspect.DataScopeAspect

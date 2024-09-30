@@ -1,0 +1,13 @@
+services:
+  axel-nocode-service:
+    build: al-start/al-start-boot
+    container_name: axel-nocode-service
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 11116:8888
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+      - /home/srv/docker_volumes/axel-nocode-service/code:/app/code
+      - /home/srv/docker_volumes/axel-nocode-service/storage:/app/storage

@@ -1,0 +1,267 @@
+html, body {
+    height: 100%;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+.back-color {
+    background: linear-gradient(to left, #00fff0, #0083fe);
+    background: -webkit-linear-gradient(to left, #00fff0, #0083fe);
+    height: 100%;
+}
+
+.login {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: url(../img/login-bg.png), linear-gradient(to left, #00fff0, #0083fe);
+    background: url(../img/login-bg.png), -webkit-linear-gradient(to left, #00fff0, #0083fe);
+    background-size: cover;
+    height: 100%;
+    font-size: 14px;
+    transform: translateX(-30px);
+    opacity: 0;
+    animation: enter-x-animation 0.4s ease-in-out 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+.login .logo {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 100px;
+}
+
+.login .brand {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 1;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.login .logo .title {
+    border-radius: 6px;
+    padding: 8px 8px 0 8px;
+    color: #fbfbfb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.login .logo .title > h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.login .logo .title > h6 {
+    font-weight: 500;
+}
+
+.login .brand img {
+    width: 100%;
+}
+
+.login .card-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.login .card-left .title {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.login .card-wrapper {
+    width: 450px;
+}
+
+.login .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+.login .card.fat {
+    padding: 10px;
+}
+
+.login .card .card-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.login .form-control {
+    border-width: 1px;
+    border-radius: 6px !important;
+    background-image: none;
+}
+
+.login .form-group label {
+    width: 100%;
+}
+
+.login .send-msg {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
+.login .captcha {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 149px;
+    z-index: 10;
+    border-radius: 6px
+}
+
+.login .captcha:hover {
+    cursor: pointer;
+}
+
+.login .btn.btn-block {
+    padding: 10px;
+}
+
+.login .btn.send-msg {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    border: none;
+    z-index: 10;
+}
+
+.login .btn-tabs.d-flex {
+    justify-content: space-between;
+}
+
+.login .btn.btn-tab {
+    font-size: 14px;
+    border-color: #d9d9d9;
+}
+
+.login .btn.btn-tab.btn-default {
+    width: 120px;
+}
+
+.login .btn.btn-tab:hover {
+    color: #2a7dc9;
+    border-color: #2a7dc9;
+    background: #fff;
+}
+
+.login .qrcode-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.login .qrcode-img .qrcode {
+    border-color: transparent;
+    box-shadow: 0 0 8px #c6c4ce;
+    width: 240px;
+    height: 240px;
+}
+
+.login .qrcode-img .qrcode-status {
+    background: hsla(0, 0%, 100%, .95);
+    position: absolute;
+    top: 0;
+    border-color: transparent;
+    box-shadow: 0 0 8px #c6c4ce;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .qrcode-img .qrcode-status > p:nth-child(2) {
+    color: #52c41a;
+}
+
+.login .qrcode-img .qrcode-status > p:last-child {
+    font-weight: 700;
+}
+
+.login .qrcode-img .qrcode-error p {
+    color: #3c3c3c;
+    font-weight: 700;
+}
+
+.login .qrcode-img .qrcode-error .refresh {
+    font-size: 12px;
+}
+
+.login .qrcode-desc {
+    display: flex;
+    justify-content: space-around;
+    color: #6c6c6c
+}
+
+.login .footer {
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+    .login .logo {
+        margin: 20px 0 0 20px;
+    }
+
+    .login .card-left .title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .login .card-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .login .card-left .title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .login .logo {
+        margin: 20px 0 0 20px;
+    }
+
+    .login .btn.btn-tab.btn-default {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .login .btn.btn-tab.btn-default {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .login .btn.btn-tab.btn-default {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .login .card.fat {
+        padding: 0;
+    }
+
+    .login .card.fat .card-body {
+        padding: 10px;
+    }
+}

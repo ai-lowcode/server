@@ -1,0 +1,2 @@
+cn.com.axel.common.cloud.config.FeignConfig
+cn.com.axel.common.cloud.interceptor.BearerTokenInterceptor

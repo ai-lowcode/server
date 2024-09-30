@@ -1,0 +1,4 @@
+cn.com.axel.common.oauth.api.fallback.RemoteUserFallback
+cn.com.axel.common.oauth.api.fallback.RemoteOrgFallback
+cn.com.axel.common.oauth.api.fallback.RemoteRoleFallback
+cn.com.axel.common.oauth.api.fallback.RemoteMenuFallback

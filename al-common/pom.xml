@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.com.axel</groupId>
+        <artifactId>axel-nocode</artifactId>
+        <version>al-1.3.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>al-common</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        Axel通用模块
+    </description>
+    <modules>
+        <module>al-common-core</module>
+        <module>al-common-redis</module>
+        <module>al-common-swagger</module>
+        <module>al-common-oauth</module>
+        <module>al-common-ds</module>
+        <module>al-common-log</module>
+        <module>al-common-scheduler</module>
+        <module>al-common-dblink</module>
+        <module>al-common-file</module>
+        <module>al-common-dataset</module>
+        <module>al-common-captcha</module>
+        <module>al-common-code</module>
+        <module>al-common-api</module>
+        <module>al-common-sys</module>
+        <module>al-common-web</module>
+        <module>al-common-app</module>
+        <module>al-common-cloud</module>
+    </modules>
+
+</project>

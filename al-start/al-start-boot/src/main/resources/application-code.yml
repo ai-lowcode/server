@@ -1,0 +1,22 @@
+code:
+  template:
+    keys:
+      - src/main/java/${packageName}/controller/${entityName}Controller.java.ftl
+      - src/main/java/${packageName}/entity/${entityName}.java.ftl
+      - src/main/java/${packageName}/mapper/${entityName}Mapper.java.ftl
+      - src/main/java/${packageName}/mapper/xml/${entityName}Mapper.xml.ftl
+      - src/main/java/${packageName}/req/Req${entityName}.java.ftl
+      - src/main/java/${packageName}/service/${entityName}Service.java.ftl
+      - src/main/java/${packageName}/service/impl/${entityName}ServiceImpl.java.ftl
+      - axel-nocode-view/src/views/${apiPrefix}/${entityName#kebab-case}/${entityName#uncap_first}.data.ts.ftl
+      - axel-nocode-view/src/views/${apiPrefix}/${entityName#kebab-case}/${entityName}Modal.vue.ftl
+      - axel-nocode-view/src/views/${apiPrefix}/${entityName#kebab-case}/${entityName}ViewModal.vue.ftl
+      - axel-nocode-view/src/views/${apiPrefix}/${entityName#kebab-case}/index.vue.ftl
+      - axel-nocode-view/src/api/${apiPrefix}/model/${entityName}Model.ts.ftl
+      - axel-nocode-view/src/api/${apiPrefix}/${entityName}.ts.ftl
+    path: template
+  savePath:
+    #前端地址
+    front: E:/javacode/axel-nocode-pro
+    #后端地址（需要指定到具体模块路径）
+    back: E:/javacode/axel-nocode-pro/al-business/al-demo

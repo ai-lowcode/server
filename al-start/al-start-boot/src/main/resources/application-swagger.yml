@@ -1,0 +1,29 @@
+swagger:
+  title: 'Axel低代码平台'
+  enabled: true
+  description : Axel框架接口文档
+  license : Powered By axel
+  licenseUrl : https://github.com/axel-qf/axel-nocode/blob/main/LICENSE
+  version : 版本号:V1.3.1
+  termsOfServiceUrl : http://www.axel.com.cn
+  contact:
+    name: axel
+    email: qiufeng9862@qq.com
+    url: http://www.axel.com.cn
+  needAuth : true
+springdoc:
+  api-docs:
+    #生产设置false
+    enabled: true
+  swagger-ui:
+    #生产设置false
+    enabled: true
+    path: /index.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    default-models-expand-depth: -1
+    docExpansion: none
+  group-configs:
+    - group: axel-nocode
+      paths-to-match: /**
+  default-flat-param-object: true

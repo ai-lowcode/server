@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.com.axel</groupId>
+        <artifactId>axel-nocode</artifactId>
+        <version>al-1.3.1</version>
+    </parent>
+
+    <artifactId>al-start</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>al-start-boot</module>
+        <module>al-start-oauth</module>
+        <module>al-start-sys</module>
+        <module>al-start-scheduler</module>
+        <module>al-start-storage</module>
+        <module>al-start-gateway</module>
+        <module>al-start-demo</module>
+        <module>al-start-lowcode</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>

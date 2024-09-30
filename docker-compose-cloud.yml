@@ -1,0 +1,76 @@
+services:
+  gateway:
+    build: al-start/al-start-gateway
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 11116:8888
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+
+  oauth:
+    build: al-start/al-start-oauth
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9218:9218
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+
+  sys:
+    build: al-start/al-start-sys
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9221:9221
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+      - /home/srv/docker_volumes/axel-nocode-service/code:/app/code
+
+
+
+  storage:
+    build: al-start/al-start-storage
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9222:9222
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+      - /home/srv/docker_volumes/axel-nocode-service/storage:/app/storage
+
+  scheduler:
+    build: al-start/al-start-scheduler
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9224:9224
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+
+  openai:
+    build: al-start/al-start-openai
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9226:9226
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+
+  web:
+    build: al-start/al-start-web
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9225:9225
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs
+
+  monitor:
+    build: al-monitor
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 11121:9223
+    volumes:
+      - /home/srv/docker_volumes/axel-nocode-service/logs:/app/logs

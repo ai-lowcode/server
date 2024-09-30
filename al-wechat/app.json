@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Axel低代码—微信小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+ 
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

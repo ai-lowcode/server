@@ -1,0 +1,72 @@
+spring: 
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        # 认证中心
+        - id: al-oauth
+          uri: lb://al-oauth
+          predicates:
+            - Path=/oauth2/**
+          filters:
+            - CacheFilter
+            # 验证码处理
+            - CheckCodeFilter
+            - StripPrefix=1
+        # 测试中心
+        - id: al-test
+          uri: lb://al-test
+          predicates:
+            - Path=/test/**
+          filters:
+            - StripPrefix=1
+        - id: al-code
+          uri: lb://al-code
+          predicates:
+            - Path=/code/**
+          filters:
+            - StripPrefix=1
+        - id: al-sys
+          uri: lb://al-sys
+          predicates:
+            - Path=/sys/**
+          filters:
+            - StripPrefix=1
+        - id: al-storage
+          uri: lb://al-storage
+          predicates:
+            - Path=/storage/**
+          filters:
+            - StripPrefix=1
+# 安全配置
+security:
+  # 验证码
+  captcha:
+    enabled: true
+    type: math
+    # 网关校验直接返回
+    gatewayCheckCaptcha:
+      # - /oauth2/authorize
+      # 网关校验，自己服务返回
+    selfCheckCaptcha:
+      - /oauth2/authorize?loginType=user_password
+  # 防止XSS攻击
+  xss:
+    enabled: true
+    excludeUrls:
+  # 不校验白名单
+  ignore:
+    whites:
+      - /oauth2/accessToken
+      - /oauth2/authorize
+      - /oauth2/sendMsg
+      - /oauth2/qrCodeLogin/*
+      - /oauth2/wx/bind/**
+      - /oauth2/static/**
+      - /storage/file/*.*
+      - /code/**
+      - /test/**
+      - /*/v2/api-docs

@@ -1,0 +1,3 @@
+cn.com.axel.sys.api.fallback.RemoteLogFallback
+cn.com.axel.sys.api.fallback.RemoteDbConnectFallback
+cn.com.axel.sys.api.fallback.RemoteDictFallback
