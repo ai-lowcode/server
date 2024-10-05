@@ -14,7 +14,7 @@ import java.util.List;
  * @description: 树形分类
  * @author: axel
  * @date: 2024-03-12
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 public interface DictCategoryService extends IService<DictCategory> {
 

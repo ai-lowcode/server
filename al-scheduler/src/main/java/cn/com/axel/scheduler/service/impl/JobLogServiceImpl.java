@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
  * @description: 任务日志
  * @author: axel
  * @date: 2023-02-14
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 @Service
 public class JobLogServiceImpl extends ServiceImpl<JobLogMapper, JobLog> implements JobLogService {

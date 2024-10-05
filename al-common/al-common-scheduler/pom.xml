@@ -5,7 +5,7 @@
     <parent>
         <artifactId>al-common</artifactId>
         <groupId>cn.com.axel</groupId>
-        <version>al-1.3.1</version>
+        <version>al-0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

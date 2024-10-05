@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY target/al-*.jar /app/
 
-ENTRYPOINT ["java", "-jar", "al-demo.jar"]
+ENTRYPOINT ["java", "-jar", "al-lowcode.jar"]

@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * @Description: 字典项
  * @Author: axel
  * @date: 2023-01-03
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 @Data
 @TableName("sys_dict_item")

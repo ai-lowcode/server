@@ -1,5 +1,5 @@
 swagger:
-  title: 'Axel样例服务'
+  title: 'Axel低代码服务'
 # mybatis配置
 mybatis-plus:
   # 配置mapper的扫描，找到所有的mapper.xml映射文件

@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: 角色信息表
  * @Author: axel
  * @date: 2022-09-20
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 @Data
 @TableName("sso_role")

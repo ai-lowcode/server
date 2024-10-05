@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * @Description: 菜单权限表
  * @Author: axel
  * @date: 2022-09-21
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -31,6 +31,16 @@ public class SsoMenu extends BaseTreeEntity<String> {
     private String menuName;
     @Schema(description = "菜单类型(0目录 1菜单 2按钮)")
     private Integer menuType;
+    @Schema(description = "组件类型(0低代码 1组件 2iframe 3系统文件)")
+    private Integer compType;
+    @Schema(description = "低代码页面")
+    private String lowcodePage;
+    @Schema(description = "本地组件")
+    private String localFile;
+    @Schema(description = "iframe地址")
+    private String externalUrl;
+    @Schema(description = "系统文件")
+    private String systemModule;
     @Schema(description = "菜单状态(1显示 0隐藏)")
     private Integer isVisible;
     @Schema(description = "当前激活菜单(当菜单隐藏时，设置当前激活的菜单项)")
@@ -45,8 +55,6 @@ public class SsoMenu extends BaseTreeEntity<String> {
     private Integer menuSort;
     @Schema(description = "路由地址")
     private String routePath;
-    @Schema(description = "组件路径")
-    private String component;
     @Schema(description = "是否缓存(1是 0否)")
     private Integer isKeepalive;
     @Schema(description = "是否为外部链接(1是 0否)")

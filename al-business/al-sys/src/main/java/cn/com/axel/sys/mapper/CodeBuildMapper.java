@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @description: 代码构建
  * @author: axel
  * @date: 2023-04-11
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 public interface CodeBuildMapper extends BaseMapper<CodeBuild> {
 

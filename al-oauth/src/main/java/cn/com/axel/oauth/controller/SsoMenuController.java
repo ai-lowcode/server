@@ -22,7 +22,7 @@ import java.util.List;
  * @Description: 菜单表
  * @Author: axel
  * @date: 2022-09-21
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 @Slf4j
 @Tag(name = "菜单表")

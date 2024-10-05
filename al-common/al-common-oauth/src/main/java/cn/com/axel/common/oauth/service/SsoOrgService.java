@@ -17,7 +17,7 @@ import java.util.List;
  * @Description: 组织结构表
  * @Author: axel
  * @date: 2022-09-20
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 public interface SsoOrgService extends IService<SsoOrg> {
     Result<SsoOrg> insertOrg(SsoOrg ssoOrg);

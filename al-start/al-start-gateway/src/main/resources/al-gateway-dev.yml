@@ -29,6 +29,12 @@ spring:
             - Path=/code/**
           filters:
             - StripPrefix=1
+        - id: al-lowcode
+          uri: lb://al-lowcode
+          predicates:
+            - Path=/lowcode/**
+          filters:
+            - StripPrefix=1
         - id: al-sys
           uri: lb://al-sys
           predicates:
@@ -68,5 +74,6 @@ security:
       - /oauth2/static/**
       - /storage/file/*.*
       - /code/**
+      - /lowcode/**
       - /test/**
       - /*/v2/api-docs

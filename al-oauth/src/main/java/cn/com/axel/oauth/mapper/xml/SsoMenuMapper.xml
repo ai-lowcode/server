@@ -10,7 +10,11 @@
             <if test="menuSort != null">menu_sort,</if>
             <if test="menuType != null">menu_type,</if>
             <if test="routePath != null">route_path,</if>
-            <if test="component != null">component,</if>
+            <if test="compType != null">comp_type,</if>
+            <if test="lowcodePage != null">lowcode_page,</if>
+            <if test="localFile != null">local_file,</if>
+            <if test="externalUrl != null">external_url,</if>
+            <if test="systemModule != null">system_module,</if>
             <if test="permissions != null">permissions,</if>
             <if test="isExternal != null">is_external,</if>
             <if test="isVisible != null">is_visible,</if>
@@ -30,7 +34,11 @@
             <if test="menuSort != null">#{menuSort},</if>
             <if test="menuType != null">#{menuType},</if>
             <if test="routePath != null">#{routePath},</if>
-            <if test="component != null">#{component},</if>
+            <if test="compType != null">#{compType},</if>
+            <if test="systemModule != null">#{systemModule},</if>
+            <if test="externalUrl != null">#{externalUrl},</if>
+            <if test="localFile != null">#{localFile},</if>
+            <if test="lowcodePage != null">#{lowcodePage},</if>
             <if test="permissions != null">#{permissions},</if>
             <if test="isExternal != null">#{isExternal},</if>
             <if test="isVisible != null">#{isVisible},</if>

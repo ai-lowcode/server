@@ -19,7 +19,7 @@ import java.util.List;
  * @description: 租户信息表
  * @author: axel
  * @date: 2023-05-31
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 @Data
 @TableName("sso_tenant")

@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * @description: 租户信息表
  * @author: axel
  * @date: 2023-05-31
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 @Service
 @Slf4j

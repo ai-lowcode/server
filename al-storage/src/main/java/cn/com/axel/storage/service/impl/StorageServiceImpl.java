@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @description: 文件缓存
  * @author: axel
  * @date: 2023-01-05
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 @Service
 public class StorageServiceImpl extends ServiceImpl<StorageMapper, StorageInfo> implements StorageService {

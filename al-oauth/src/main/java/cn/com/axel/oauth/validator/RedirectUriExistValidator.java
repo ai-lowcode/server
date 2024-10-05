@@ -21,6 +21,7 @@ public class RedirectUriExistValidator extends AbstractClientValidator {
             return result1;
         }
         String uri = request.getParameter(OAuth.OAUTH_REDIRECT_URI);
+        System.out.println(result1.getData());
         if (checkUri(uri, result1.getData())) {
             return result1;
         }

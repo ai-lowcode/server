@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
  * @description: 任务日志
  * @author: axel
  * @date: 2023-02-14
- * @version: V1.3.1
+ * @version: V0.0.1
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

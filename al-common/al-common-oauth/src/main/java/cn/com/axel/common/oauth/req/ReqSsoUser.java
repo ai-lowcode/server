@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
  * @Description: 用户信息
  * @Author: axel
  * @date: 2022-11-13
- * @Version: V1.3.1
+ * @Version: V0.0.1
  */
 @Data
 @Accessors(chain = true)
