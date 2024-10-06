@@ -125,7 +125,7 @@ public class CodeBuildServiceImpl extends ServiceImpl<CodeBuildMapper, CodeBuild
         SsoMenu ssoMenu = new SsoMenu();
         ssoMenu.setMenuName(reqCode.getTableComment())
                 .setRoutePath(routePath)
-                .setComponent("/" + reqCode.getApiPrefix() + routePath + "/index.vue")
+                .setLocalFile("/" + reqCode.getApiPrefix() + routePath + "/index.vue")
                 .setMenuIcon("ant-design:bars-outlined")
                 .setMenuSort(999).setMenuType(1).setIsExternal(0).setIsKeepalive(1).setIsVisible(1)
                 .setParentId(reqMenuCreate.getParentId());
