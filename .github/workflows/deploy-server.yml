@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  # 在针对 `main` 分支的推送上运行。如果你
+  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+  push:
+    branches: [master]
+
+  # 允许你从 Actions 选项卡手动运行此工作流程
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USERNAME }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          port: ${{ secrets.REMOTE_PORT }}
+          script: |
+            export M2_HOME=/usr/local/apache-maven-3.9.9
+            export CLASSPATH=$CLASSPATH:$M2_HOME/lib
+            export PATH=$PATH:$M2_HOME/bin
+            export JAVA_HOME=/usr/local/jdk21
+            export CLASSPATH=.:${JAVA_HOME}/lib
+            export PATH=${CLASSPATH}:${JAVA_HOME}/bin:$PATH
+            cd /opt/server && git pull && mvn clean && mvn package
+            cd /opt && bash deploy-server.sh restart
