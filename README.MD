@@ -11,6 +11,17 @@ AiLowCode代码开发平台（后端）-> [前端地址](https://github.com/ai-l
 [![GitHub stars](https://img.shields.io/github/stars/ai-lowcode/server.svg?style=social&label=Stars)](https://github.com/ai-lowcode/server)
 [![GitHub forks](https://img.shields.io/github/forks/ai-lowcode/server.svg?style=social&label=Fork)](https://github.com/ai-lowcode/server)
 
+## 平台交流
+
+### 微信:
+
+![](https://i.imgur.com/tD8L1B2.png)
+
+### QQ群:
+
+[![加入QQ群](https://img.shields.io/badge/718136001-blue.svg)](https://qm.qq.com/q/YPjQJoIxqI)
+点击链接加入群聊【Ai-LowCode 交流群】
+
 ## 特别鸣谢
 
 后端代码主要参考: [摸鱼低代码](https://github.com/mfish-qf/mfish-nocode)
